@@ -1,0 +1,120 @@
+/* Basic base styles */
+html, body { 
+  height: 100%; 
+}
+
+img, embed, object, video, picture {
+    max-width: 100%;
+  }
+
+html {
+  box-sizing: border-box;
+}
+  
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  font-family: system-ui, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background: #0f0f10; color: #f5f5f5; 
+  /* line-height: 1.6; */
+}
+
+h1 {
+    font-size: 30px auto;
+}
+
+/* p, h1, h2, h3, h4, h5 {
+  margin: 0px;
+  padding: 0px;
+} */
+
+a { 
+  color: #FEFAE0; 
+  text-decoration: none; 
+}
+
+#logo a {
+    font-weight: 700;
+}
+
+.container { 
+  width: min(92%, 1100px); 
+  margin: 0 auto; }
+
+header, footer { 
+  padding: 16px 0; 
+}
+
+.site-footer { 
+  color: #c9c9c9; 
+  border-top: 1px solid rgba(255,255,255,.08); 
+  text-align: center; 
+  padding: 24px 0; 
+}
+
+/* Simple nav */
+.menu-toggle {
+  border: 1px solid rgba(255,255,255,.25);
+  background: black; 
+  color: #f5f5f5;
+  padding: .5em .65em; 
+  border-radius: .65em;
+}
+
+#menu-style{
+  display:flex; 
+  justify-content:flex-end; 
+  align-items:center; 
+  gap:12px
+}
+
+
+nav.site-nav { 
+  display: none; 
+}
+
+nav.site-nav.is-open { 
+  display: block; 
+}
+
+/* .cards { 
+  padding: 10px;
+} */
+
+.cards article { 
+  padding: 10px;
+  height: 12em;
+  width: auto;
+  text-align: center;
+}
+
+
+#player-container {
+  position: relative;  
+  display: flex; 
+  flex-direction: column; 
+} 
+
+.btn { 
+  display:inline-block; 
+  background:#FEFAE0; 
+  color:#111; 
+  padding:.6em .9em; 
+  border-radius:.9rem; 
+  font-weight:600; 
+}
+
+.btn-ghost { 
+  background: transparent; 
+  border: 1px solid #FEFAE0; 
+  color: #FEFAE0; 
+}
+
+@media (min-width: 900px) {
+  .menu-toggle { display: none; }
+  nav.site-nav { display: block; }
+}
