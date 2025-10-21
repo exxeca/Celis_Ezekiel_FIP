@@ -72,6 +72,23 @@ header, footer {
   gap:12px
 }
 
+.site-nav a {
+  display: inline-block;
+  margin: 0 1em;
+  color: #fefae0; 
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.site-nav a:hover {
+  color: #6dff91; /* slightly brighter or change to your highlight */
+  transform: scale(1.05);
+  opacity: 0.7;
+  filter: blur(0.2);
+}
+
 
 nav.site-nav { 
   display: none; 
