@@ -1,20 +1,23 @@
-(() => {
+(function initSiteJS() {
   const btn = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#site-nav');
-  if (btn && nav) {
-    btn.addEventListener('click', () => {
-      nav.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', nav.classList.contains('is-open'));
-    });
+  const form = document.querySelector('#contactForm');
+
+  function handleMenuClick() {
+    nav.classList.toggle('is-open');
+    btn.setAttribute(nav.classList.contains('is-open'));
   }
 
-  const form = document.querySelector('#contactForm');
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    
+  }
+
+  if (btn && nav) {
+    btn.addEventListener('click', handleMenuClick);
+  }
+
   if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-    });
+    form.addEventListener('submit', handleFormSubmit);
   }
 })();
-
-
-
