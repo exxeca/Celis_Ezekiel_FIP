@@ -16,6 +16,19 @@ It is designed as the foundation for my final portfolio presentation during **In
 **Dark UI Theme** – Minimal, modern design with accent color `#FEFAE0`.  
 **Cross-Course Integration** – Combines learning outcomes from Web Dev, Motion Design, and Industry Night.  
 
+## Features
+- Responsive multi-page layout
+- Mobile navigation animation
+- Hero & card reveal GSAP animations
+- Custom video player
+- Project showcase grid
+
+## Technologies
+- HTML5 / CSS3 / SCSS
+- JavaScript (GSAP + ScrollTrigger)
+- Plyr.io video player
+- GitHub for version control
+
 ## Installation  
 N/A  
 
