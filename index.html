@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="styles/css/grid.css">
   <link rel="stylesheet" href="styles/css/main.min.css">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.8.3/plyr.css" />
-
+  
+  <meta name="description" content="Ezekiel Celis — Front-End Developer & Visual Designer. Clean UI, smooth motion, accessible, responsive web experiences.">
 
 </head>
 
@@ -24,22 +25,24 @@
   <!-- Menu -->
 
   <div id="menu-style" class="box col-start-7 col-end-13 m-col-start-6 m-col-end-13 l-col-start-4 l-col-end-13">
-    <button class="menu-toggle">Menu</button>
-      <nav id="site-nav" class="site-nav">
-        <a href="index.html">Home</a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" hidden aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
+
   </div>
 
 </header>
 
 <!-- Hero -->
 
-<main id="main" class="container grid-con">
+<main id="home-page" class="container grid-con">
   <section class="box col-span-full">
-    <h2>Hi! I’m Ezekiel — Front-End Developer & Visual Designer</h2>
+    <h1>Hi! I’m Ezekiel — Front-End Developer & Visual Designer</h1>
     <p>Mobile-first, responsive, and animated websites built with clean UI and accessible patterns.</p>
       <div>
         <a class="btn" href="projects.html">View Projects</a>
@@ -52,9 +55,15 @@
   <section class="box col-span-full">
     <h2>Featured Work</h2>
     <div class="grid-con cards">
-      <article class="box col-start-1 col-end-13 m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-5">Case Study #1</article>
-      <article class="box col-start-1 col-end-13 m-col-start-7 m-col-end-13 l-col-start-5 l-col-end-9">Case Study #2</article>
-      <article class="box col-start-1 col-end-13 m-col-start-1 m-col-end-13 l-col-start-9 l-col-end-13">Case Study #3</article>
+      <article class="box col-start-1 col-end-13 m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-5">
+        <h3>Case Study #1</h3>
+      </article>
+      <article class="box col-start-1 col-end-13 m-col-start-7 m-col-end-13 l-col-start-5 l-col-end-9">
+        <h3>Case Study #2</h3>
+      </article>
+      <article class="box col-start-1 col-end-13 m-col-start-1 m-col-end-13 l-col-start-9 l-col-end-13">
+        <h3>Case Study #3</h3>
+      </article>
     </div>
   </section>
 
@@ -62,7 +71,7 @@
 
   <section id="player-container" class="box col-span-full">
     <h2>Demo Reels</h2>
-    <video id="player" playsinline controls data-poster="images/placeholder.jpg">
+    <video id="player" playsinline controls preload="metadata" data-poster="images/placeholder.jpg">
       <source src="video/video.mp4" type="video/mp4" />
       <source src="video/video.webm" type="video/webm" />
         <!-- Optional captions -->
@@ -79,11 +88,20 @@
     <p>2025 Ezekiel Celis — Portfolio</p>
   </footer>
 
-<!-- Java Script -->
-  <script src="js/main.js"></script>
+<!-- Plyr (only on pages with the video) -->
+<script defer src="https://cdn.plyr.io/3.8.3/plyr.polyfilled.js"></script>
 
-<!--Plyr Intergration -->
-  <script src="https://cdn.plyr.io/3.8.3/plyr.polyfilled.js"></script>
+<!-- GSAP (only where you animate) -->
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer>window.gsap && gsap.registerPlugin(ScrollTrigger);</script>
+
+
+<script defer src="js/main.js"></script>
+
+
+
+
 
 </body>
 </html>
