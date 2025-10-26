@@ -179,12 +179,15 @@ nav.site-nav.is-open{
   nav.site-nav[hidden]{
     display:block !important
   }
-  .cards
-  {grid-template-columns:repeat(3,1fr)
-  }
+//   .cards
+//   {grid-template-columns:repeat(3,1fr)
+//   }
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
 }
+
+
+

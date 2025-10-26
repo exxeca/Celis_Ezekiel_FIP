@@ -88,6 +88,22 @@ if (window.gsap) {
   }
 }
 
+// ===== Plyr Video Player Setup =====
+document.addEventListener('DOMContentLoaded', () => {
+  const playerElement = document.querySelector('#player');
+  if (playerElement && window.Plyr) {
+    const player = new Plyr(playerElement, {
+      controls: [
+        'play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'
+      ],
+      settings: ['captions', 'quality', 'speed'],
+      invertTime: false
+    });
+    console.log('[Plyr] Initialized:', player);
+  }
+});
+
+
 
 
 
